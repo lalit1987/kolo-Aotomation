@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="tests.DevicesTest">
+        <methods>
+          <include name="verifyDevicesuccessfull"/>
+        </methods>
+      </class> <!-- tests.DevicesTest -->
+      <class name="tests.FloorsTest">
+        <methods>
+          <include name="verifyCloneExistingFloor"/>
+          <include name="verifyDeleteExistingFloor"/>
+          <include name="verifyNewExistingFloorCreate"/>
+          <include name="verifyEditExistingFloor"/>
+          <include name="verifyCloneExistingFloor1"/>
+          <include name="verifyFloorsuccessfull"/>
+          <include name="verifyMoveExistingFloor"/>
+          <include name="verifyNewFloorCreateRandom"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.FloorsTest -->
+      <class name="tests.RoomsTest">
+        <methods>
+          <include name="verifyMoveExistingRoom"/>
+          <include name="verifyCloneExistingRoom1"/>
+          <include name="verifyNewExistingRoomCreate"/>
+          <include name="verifyCloneExistingRoom"/>
+          <include name="verifyEditExistingRoom"/>
+          <include name="verifyDeleteExistingRoom"/>
+          <include name="verifyNewRoomCreateRandom"/>
+          <include name="verifyRoomSuccessfull"/>
+        </methods>
+      </class> <!-- tests.RoomsTest -->
+      <class name="tests.AccountsTest">
+        <methods>
+          <include name="verifyAccountSearchSuccessfull"/>
+          <include name="verifyAccountSuccessfull"/>
+        </methods>
+      </class> <!-- tests.AccountsTest -->
+      <class name="tests.BuildingsTest">
+        <methods>
+          <include name="verifyNewBuildingCreateRandom"/>
+          <include name="verifyCloneExistingBuilding"/>
+          <include name="verifyEditExistingBuilding"/>
+          <include name="verifyBuildingSuccessfull"/>
+          <include name="verifyNewExistingBuildingCreate"/>
+          <include name="verifyDeleteExistingBuilding"/>
+        </methods>
+      </class> <!-- tests.BuildingsTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
