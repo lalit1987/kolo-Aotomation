@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">11</td><td class="numi">11</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">119.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">tests.profileTest</td><td><a href="#m1"><b>profilePage</b>  </a></td><td class="numi">1</td><td>1578653601079</td><td class="numi">12659</td></tr>
+<tr><th colspan="4">Test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">tests.splashTest</td><td><a href="#m2"><b>spalshScreens</b>  </a></td><td class="numi">1</td><td>1578653506171</td><td class="numi">4067</td></tr><tr class="passedodd"><td><a href="#m3"><b>verifysSplash</b>  </a></td><td class="numi">1</td><td>1578653510239</td><td class="numi">828</td></tr>
+<tr class="passedeven"><td rowspan="7">tests.loginTest</td><td><a href="#m4"><b>needHelplink</b>  </a></td><td class="numi">1</td><td>1578653511069</td><td class="numi">14956</td></tr><tr class="passedeven"><td><a href="#m5"><b>loginInValidUserInvalidPassword</b>  </a></td><td class="numi">1</td><td>1578653526026</td><td class="numi">7479</td></tr><tr class="passedeven"><td><a href="#m6"><b>loginInValidUservalidPasswords</b>  </a></td><td class="numi">1</td><td>1578653533508</td><td class="numi">7887</td></tr><tr class="passedeven"><td><a href="#m7"><b>loginValidUserInvalidPasswords</b>  </a></td><td class="numi">1</td><td>1578653541396</td><td class="numi">6889</td></tr><tr class="passedeven"><td><a href="#m8"><b>forgetPasswordLink</b>  </a></td><td class="numi">1</td><td>1578653548286</td><td class="numi">6810</td></tr><tr class="passedeven"><td><a href="#m9"><b>firstLoginTest</b>  </a></td><td class="numi">1</td><td>1578653555099</td><td class="numi">9061</td></tr><tr class="passedeven"><td><a href="#m10"><b>loginContinue</b>  </a></td><td class="numi">1</td><td>1578653564161</td><td class="numi">3386</td></tr>
+<tr class="passedodd"><td rowspan="1">tests.serviceareaTest</td><td><a href="#m11"><b>serviceArea</b>  </a></td><td class="numi">1</td><td>1578653567548</td><td class="numi">33529</td></tr>
+<tr class="passedeven"><td rowspan="1">tests.helpTest</td><td><a href="#m12"><b>profilePage</b>  </a></td><td class="numi">1</td><td>1578653613740</td><td class="numi">11685</td></tr>
+</table>
+<h1>Test</h1>
+<h2 id="m1">tests.profileTest:profilePage</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/profile_digest_subscription})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.profilePage.profilePageEdit(profilePage.java:72)
+<br/>at tests.profileTest.profilePage(profileTest.java:17)
+<br/>25 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@74cec793 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.profilePage.profilePageEdit(profilePage.java:72)
+<br/>at tests.profileTest.profilePage(profileTest.java:17)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/profile_digest_subscription})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.profilePage.profilePageEdit(profilePage.java:72)
+<br/>at tests.profileTest.profilePage(profileTest.java:17)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">tests.splashTest:verifysSplash</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">tests.loginTest:needHelplink</h2>
+<div style="padding-left:3em">
+Passed : Actual Text:= [Need help?] Expected Text:= [Need help?]<br/>
+Passed : Actual Text:= [+1 (800) 890–0896] Expected Text:= [+1 (800) 890–0896]<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">tests.loginTest:loginInValidUserInvalidPassword</h2>
+<div style="padding-left:3em">
+Passed : Actual Text:= [Could not login] Expected Text:= [Could not login]<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">tests.loginTest:loginInValidUservalidPasswords</h2>
+<div style="padding-left:3em">
+Passed : Actual Text:= [Could not login] Expected Text:= [Could not login]<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">tests.splashTest:spalshScreens</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">tests.loginTest:loginValidUserInvalidPasswords</h2>
+<div style="padding-left:3em">
+Passed : Actual Text:= [Could not login] Expected Text:= [Could not login]<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">tests.serviceareaTest:serviceArea</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">tests.helpTest:profilePage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">tests.loginTest:firstLoginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">tests.loginTest:loginContinue</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">tests.loginTest:forgetPasswordLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

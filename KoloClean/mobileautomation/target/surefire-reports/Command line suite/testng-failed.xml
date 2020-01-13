@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="tests.BaseTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.BaseTest -->
+      <class name="tests.serviceareaTest">
+        <methods>
+          <include name="serviceArea"/>
+        </methods>
+      </class> <!-- tests.serviceareaTest -->
+      <class name="tests.splashTest">
+        <methods>
+          <include name="verifysSplash"/>
+        </methods>
+      </class> <!-- tests.splashTest -->
+      <class name="tests.profileTest">
+        <methods>
+          <include name="profilePage"/>
+        </methods>
+      </class> <!-- tests.profileTest -->
+      <class name="tests.loginTest">
+        <methods>
+          <include name="forgetPasswordLink"/>
+          <include name="loginInValidUservalidPasswords"/>
+          <include name="loginInValidUserInvalidPassword"/>
+          <include name="needHelplink"/>
+          <include name="firstLoginTest"/>
+          <include name="loginValidUserInvalidPasswords"/>
+          <include name="loginContinue"/>
+        </methods>
+      </class> <!-- tests.loginTest -->
+      <class name="tests.helpTest">
+        <methods>
+          <include name="profilePage"/>
+        </methods>
+      </class> <!-- tests.helpTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">11</td><td class="numi">35.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Command line test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="7">tests.loginTest</td><td><a href="#m1"><b>firstLoginTest</b>  </a></td><td class="numi">1</td><td>1578554863882</td><td class="numi">3835</td></tr><tr class="failedodd"><td><a href="#m2"><b>forgetPasswordLink</b>  </a></td><td class="numi">1</td><td>1578554862007</td><td class="numi">1875</td></tr><tr class="failedodd"><td><a href="#m3"><b>loginContinue</b>  </a></td><td class="numi">1</td><td>1578554867717</td><td class="numi">3828</td></tr><tr class="failedodd"><td><a href="#m4"><b>loginInValidUserInvalidPassword</b>  </a></td><td class="numi">1</td><td>1578554838586</td><td class="numi">2000</td></tr><tr class="failedodd"><td><a href="#m5"><b>loginInValidUservalidPasswords</b>  </a></td><td class="numi">1</td><td>1578554852217</td><td class="numi">6002</td></tr><tr class="failedodd"><td><a href="#m6"><b>loginValidUserInvalidPasswords</b>  </a></td><td class="numi">1</td><td>1578554860164</td><td class="numi">1843</td></tr><tr class="failedodd"><td><a href="#m7"><b>needHelplink</b>  </a></td><td class="numi">1</td><td>1578554835976</td><td class="numi">2610</td></tr>
+<tr class="failedeven"><td rowspan="1">tests.helpTest</td><td><a href="#m8"><b>profilePage</b>  </a></td><td class="numi">1</td><td>1578554840586</td><td class="numi">1953</td></tr>
+<tr class="failedodd"><td rowspan="1">tests.profileTest</td><td><a href="#m9"><b>profilePage</b>  </a></td><td class="numi">1</td><td>1578554842539</td><td class="numi">1891</td></tr>
+<tr class="failedeven"><td rowspan="1">tests.serviceareaTest</td><td><a href="#m10"><b>serviceArea</b>  </a></td><td class="numi">1</td><td>1578554844430</td><td class="numi">3906</td></tr>
+<tr class="failedodd"><td rowspan="1">tests.splashTest</td><td><a href="#m11"><b>verifysSplash</b>  </a></td><td class="numi">1</td><td>1578554858219</td><td class="numi">1945</td></tr>
+<tr><th colspan="4">Command line test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">tests.splashTest</td><td><a href="#m12"><b>spalshScreens</b>  </a></td><td class="numi">1</td><td>1578554848336</td><td class="numi">3875</td></tr>
+</table>
+<h1>Command line test</h1>
+<h2 id="m1">tests.splashTest:verifysSplash</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/login_selector_installation_id_continue})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+<br/>at pages.splash.verifySplash(splash.java:49)
+<br/>at tests.splashTest.verifysSplash(splashTest.java:22)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@d62fe5b (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+<br/>at pages.splash.verifySplash(splash.java:49)
+<br/>at tests.splashTest.verifysSplash(splashTest.java:22)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/login_selector_installation_id_continue})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+<br/>at pages.splash.verifySplash(splash.java:49)
+<br/>at tests.splashTest.verifysSplash(splashTest.java:22)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">tests.loginTest:loginInValidUserInvalidPassword</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/login_selector_login})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginInValidUserInvalidPassword(firstLoginPage.java:112)
+<br/>at tests.loginTest.loginInValidUserInvalidPassword(loginTest.java:22)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@7f284218 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginInValidUserInvalidPassword(firstLoginPage.java:112)
+<br/>at tests.loginTest.loginInValidUserInvalidPassword(loginTest.java:22)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/login_selector_login})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginInValidUserInvalidPassword(firstLoginPage.java:112)
+<br/>at tests.loginTest.loginInValidUserInvalidPassword(loginTest.java:22)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">tests.helpTest:profilePage</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/dashboard_navigation_item_help})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.helpPage.helpPage(helpPage.java:54)
+<br/>at tests.helpTest.profilePage(helpTest.java:17)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@43599640 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.helpPage.helpPage(helpPage.java:54)
+<br/>at tests.helpTest.profilePage(helpTest.java:17)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/dashboard_navigation_item_help})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.helpPage.helpPage(helpPage.java:54)
+<br/>at tests.helpTest.profilePage(helpTest.java:17)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">tests.profileTest:profilePage</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/dashboard_navigation_item_profile})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.profilePage.profilePageEdit(profilePage.java:63)
+<br/>at tests.profileTest.profilePage(profileTest.java:17)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2a225dd7 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.profilePage.profilePageEdit(profilePage.java:63)
+<br/>at tests.profileTest.profilePage(profileTest.java:17)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/dashboard_navigation_item_profile})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.profilePage.profilePageEdit(profilePage.java:63)
+<br/>at tests.profileTest.profilePage(profileTest.java:17)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">tests.loginTest:needHelplink</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/login_selector_help})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.needHelp(firstLoginPage.java:97)
+<br/>at tests.loginTest.needHelplink(loginTest.java:15)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1b410b60 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.needHelp(firstLoginPage.java:97)
+<br/>at tests.loginTest.needHelplink(loginTest.java:15)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/login_selector_help})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.needHelp(firstLoginPage.java:97)
+<br/>at tests.loginTest.needHelplink(loginTest.java:15)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">tests.loginTest:loginContinue</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/navigationBarBackButton})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.continueLogin(firstLoginPage.java:168)
+<br/>at tests.loginTest.loginContinue(loginTest.java:61)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@93cf163 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.continueLogin(firstLoginPage.java:168)
+<br/>at tests.loginTest.loginContinue(loginTest.java:61)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/navigationBarBackButton})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.continueLogin(firstLoginPage.java:168)
+<br/>at tests.loginTest.loginContinue(loginTest.java:61)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">tests.loginTest:loginValidUserInvalidPasswords</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/login_selector_login})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginValidUserInvalidPassword(firstLoginPage.java:132)
+<br/>at tests.loginTest.loginValidUserInvalidPasswords(loginTest.java:37)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2631f68c (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginValidUserInvalidPassword(firstLoginPage.java:132)
+<br/>at tests.loginTest.loginValidUserInvalidPasswords(loginTest.java:37)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/login_selector_login})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginValidUserInvalidPassword(firstLoginPage.java:132)
+<br/>at tests.loginTest.loginValidUserInvalidPasswords(loginTest.java:37)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">tests.serviceareaTest:serviceArea</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/continueButton})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.serviceAreaPage.serviceArea(serviceAreaPage.java:52)
+<br/>at tests.serviceareaTest.serviceArea(serviceareaTest.java:16)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@6676f6a0 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.serviceAreaPage.serviceArea(serviceAreaPage.java:52)
+<br/>at tests.serviceareaTest.serviceArea(serviceareaTest.java:16)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/continueButton})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.serviceAreaPage.serviceArea(serviceAreaPage.java:52)
+<br/>at tests.serviceareaTest.serviceArea(serviceareaTest.java:16)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">tests.loginTest:forgetPasswordLink</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/login_selector_login})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.forgetPassword(firstLoginPage.java:144)
+<br/>at tests.loginTest.forgetPasswordLink(loginTest.java:44)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@4c51cf28 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.forgetPassword(firstLoginPage.java:144)
+<br/>at tests.loginTest.forgetPasswordLink(loginTest.java:44)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/login_selector_login})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.forgetPassword(firstLoginPage.java:144)
+<br/>at tests.loginTest.forgetPasswordLink(loginTest.java:44)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">tests.loginTest:firstLoginTest</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/login_selector_login})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginToClean(firstLoginPage.java:157)
+<br/>at tests.loginTest.firstLoginTest(loginTest.java:52)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@324a0017 (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginToClean(firstLoginPage.java:157)
+<br/>at tests.loginTest.firstLoginTest(loginTest.java:52)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/login_selector_login})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
+<br/>at pages.BasePage.click(BasePage.java:24)
+<br/>at pages.firstLoginPage.loginToClean(firstLoginPage.java:157)
+<br/>at tests.loginTest.firstLoginTest(loginTest.java:52)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">tests.loginTest:loginInValidUservalidPasswords</h2>
+<div style="padding-left:3em">
+<p>Can&apos;t locate an element by this strategy: By.chained({By.id: com.teracode.kolo.staging:id/account_login_password})</p>
+io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.sendKeys(&lt;generated&gt;)
+<br/>at pages.BasePage.writeText(BasePage.java:29)
+<br/>at pages.firstLoginPage.loginInValidUservalidPassword(firstLoginPage.java:123)
+<br/>at tests.loginTest.loginInValidUservalidPasswords(loginTest.java:30)
+<br/>35 lines not shown
+<p>Caused by Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@6ccdb29f (tried for 1 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:266)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.sendKeys(&lt;generated&gt;)
+<br/>at pages.BasePage.writeText(BasePage.java:29)
+<br/>at pages.firstLoginPage.loginInValidUservalidPassword(firstLoginPage.java:123)
+<br/>at tests.loginTest.loginInValidUservalidPasswords(loginTest.java:30)
+<br/>35 lines not shown
+<p>Caused by Cannot locate an element using By.chained({By.id: com.teracode.kolo.staging:id/account_login_password})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;GURWUNI112103&apos;, ip: &apos;172.19.120.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: driver.version: AppiumDriver</p>
+io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+<br/>at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+<br/>at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+<br/>at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.sendKeys(&lt;generated&gt;)
+<br/>at pages.BasePage.writeText(BasePage.java:29)
+<br/>at pages.firstLoginPage.loginInValidUservalidPassword(firstLoginPage.java:123)
+<br/>at tests.loginTest.loginInValidUservalidPasswords(loginTest.java:30)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">tests.splashTest:spalshScreens</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>
